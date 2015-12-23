@@ -106,6 +106,32 @@ docker-php-ext-install pdo_mysql
 
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# mbstring
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# install build dependencies and runtime libs
+#apt-get -y install
+
+# create extension
+docker-php-ext-install mbstring
+
+# remove build dependencies
+#apt-get -y remove  
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# zip
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# install build dependencies
+apt-get -y install zlib1g-dev
+
+# create extension
+docker-php-ext-install zip
+
+# remove build dependencies
+apt-get -y remove  zlib1g-dev
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # redis (from git)
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # install build dependencies/tools
