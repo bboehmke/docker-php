@@ -7,6 +7,9 @@ RUN sh /tmp/install.sh
 # add improved fpm config (socket + more children)
 COPY php-fpm.conf /usr/local/etc/
 
+# copy production php ini
+COPY php.ini /usr/local/etc/php/
+
 # prepare socket dir
 RUN mkdir /run/php/ && \
     chown www-data:www-data /run/php
