@@ -119,6 +119,19 @@ docker-php-ext-install mbstring
 
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# pcntl
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# install build dependencies and runtime libs
+#apt-get -y install
+
+# create extension
+docker-php-ext-install pcntl
+
+# remove build dependencies
+#apt-get -y remove  
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # zip
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # install build dependencies
