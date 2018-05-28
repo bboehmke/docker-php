@@ -11,15 +11,15 @@ apt-get update
 # gd
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # install build dependencies and runtime libs
-apt-get -y install libfreetype6-dev libjpeg62-turbo-dev libpng12-dev \
-                   libfreetype6     libjpeg62-turbo     libpng12-0
+apt-get -y install libfreetype6-dev libjpeg62-turbo-dev libpng-dev \
+                   libfreetype6     libjpeg62-turbo     libpng16-16
 
 # create extension
 docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/
 docker-php-ext-install gd
 
 # remove build dependencies
-apt-get -y remove  libfreetype6-dev libjpeg62-turbo-dev libpng12-dev
+apt-get -y remove  libfreetype6-dev libjpeg62-turbo-dev libpng-dev
 
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -42,7 +42,7 @@ apt-get -y remove  libc-client2007e-dev libkrb5-dev
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # install build dependencies and runtime libs
 apt-get -y install libicu-dev \
-                   libicu52
+                   libicu57
 
 # create extension
 docker-php-ext-install intl
@@ -139,7 +139,7 @@ apt-get -y install git
 cd /tmp
 
 # get source
-git clone -b php7 https://github.com/phpredis/phpredis.git
+git clone https://github.com/phpredis/phpredis.git
 cd phpredis
 
 # build extension
