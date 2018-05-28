@@ -66,20 +66,6 @@ apt-get -y remove  libldap2-dev
 
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# mcrypt
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# install build dependencies and runtime libs
-apt-get -y install libmcrypt-dev \
-                   libmcrypt4
-
-# create extension
-docker-php-ext-install mcrypt
-
-# remove build dependencies
-apt-get -y remove  libmcrypt-dev
-
-
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # mysqli
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # install build dependencies and runtime libs
